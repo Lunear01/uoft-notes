@@ -1,0 +1,46 @@
+### Devices
+- Combinational circuits
+- Multiplexer 
+	- inputs and a select input to an output
+	- inputs can be multiple bits long 
+- Demultiplexer
+	- Reverse mux
+- Decoders 
+	- Information converted into another format
+	- Don't care values
+		- Input not valid, output is not guaranteed
+		- Can be used to our benefit
+- Adders
+	- Binary arithmetic and conversion
+	- Hexadecimal numbers 
+		- 0-9 
+		- 10 is A 
+		- 11 is B
+		- 15 is F
+	- Half adders
+		- Adds two bites, produce two bit sum
+		- Sum bit S and carry bit C
+			- C can be implemented by `and` gate 
+			- S can be implemented by `or` gate
+	- Full adders 
+		- Same as half adders but with an extra input `Z`
+		- Can be chained together 
+	- Reduction
+		- Shrinks a multibit data into a single bit
+- Ripple-Carry binary adder
+- Subtractors 
+	- Negative numbers can be represented as binary numbers 
+		- Consider 11111111 + 00000001
+			- All 0 except the carry on the 9th place, which returns 0, thus 11111111 must be -1
+	- Signed vs unsigned
+		- Unsigned all numbers a are positive
+		- Signed all bits are used to store a 2's complement negative number
+			- Half positive(including 0) and half negative
+	- Two's complement (converting a given binary number into a negative)
+		- Take one's complement
+			- Flip the 0 to 1 and 1 into 0 
+		- Then add one to the one's complement, giving two's complement
+	- Rewriting subtractions into additions
+- Comparators 
+	- Using adder/subtractors to compare values
+	- 

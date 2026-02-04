@@ -1,0 +1,91 @@
+### C Language 
+
+### Files
+- Writing to Files
+	- The "w" means to write
+	![[Pasted image 20260201174443.png]]
+	- In this case, `fprintf` is used to output the print content into `output_file` the **stream**
+	- ![[Pasted image 20260201174549.png]]
+	- Use `fopen` to open the file and specific read or write mode through `"w"` or `"r"` parameter
+	- Do any changes on them using `fprint` and set the output stream to the file pointer
+	- Close the files with `fclose`
+- Reading Binary files
+	- Binary files is used because 
+		- Less storage place 
+		- Store files such as .mp3, .gif files that doesn't need it to be human readable
+	- To open a binary file in C
+		- `output_file = fopen("bin_file.mp3", "rb")`
+			- `rb` stands for read binary
+- Writing binary files
+	- `fwrite`
+		- ![[Pasted image 20260201180922.png]]
+		- (pointer to the file/data want to be written (input data), size of each element, number of elements, file pointer to write
+		- Returns the number of written element success, return 0 on error
+		- ![[Pasted image 20260201181711.png]]
+- Reading binary files
+	- `fread`
+	- ![[Pasted image 20260201181819.png]]
+	- (pointer of the file stored, size of one element, num of element, stream to read from)
+	- Returns the number of read element success, return 0 on error
+	- ![[Pasted image 20260201182146.png]]
+- All together modifying .wav files 
+	- Reading binary files with `od`
+		- ![[Pasted image 20260201183127.png]]
+		- -A translates to base 10
+		- -j skip the 44 bytes of the file (skipping headers/etcf)
+		- -t the file consists of 2 byte values
+		- The file
+- Using `fwrite` and `fread` to modify/read/store structs is possible 
+	- Same format different application
+-  Moving around in a file
+	- `fseek`
+		- ![[Pasted image 20260201185843.png]] 
+		- ![[Pasted image 20260201190027.png]]
+		-  Changing pointer position to access different elements
+	- `rewind`
+		- Move to the beginning of a file 
+		- ![[Pasted image 20260201190701.png]]
+
+### Compiler
+-  Frontend
+	- Translates source code into language independent intermediate representation
+	- Abstract syntax trees
+- Middle end
+	- Semantic analysis, make optimization to run faster
+- Backend
+	- Translates to assembly code 
+- Header files
+	- This is created to solve problems from having different source files having type mismatch when linking them together
+		- The standard practice is to have different source files compiled separated and then link them together to optimize compilation in production
+	- This is an interface, and intermediate layer 
+		- Declare functions and parameters
+	- Header file is later imported into the main function by
+		- `#include "sorts.h"`
+			- "" to tell the compiler that it's not a C library but a local file
+	- `extern`
+		- Externally define variables: abstract variables
+	- `static`
+		- makes the variable local to avoid duplicate variables
+	- Guard conditions 
+		- To avoid errors in defining multiple instances of the same error 
+		- `#ifndef SORTS_H` 
+			- Runs only when SORTS_H is NOT defined
+		- `#end if // SORTS_H`
+- Make files
+	- Tracking dependencies
+	- Make files: 
+		- ![[Pasted image 20260201211113.png]]
+		- ![[Pasted image 20260201211241.png]]
+		- The white space before the recipe is a **TAB**
+		-  It checks for any updates in dependencies and compile them 
+			- If the file straight up does not exist, then it's going to compile the entire thing
+			- If the file doesn't have any changes, it doesn't do anything
+	- Sophisticated MAKE 
+		- ![[Pasted image 20260201211538.png]]
+		- It recursive solves dependencies by running the needed compilations
+	- ![[Pasted image 20260201212229.png]]
+	- `%.0: %` indicates that all object files depend on a header file `sorts.h`
+	- `$<` the variable containing the first name of the list of dependencies
+	- `$@` the variable containing the target
+	- `.PHONY` indicates that it's not a file: lowkey like an alias
+	- Can also define variables in a make file 

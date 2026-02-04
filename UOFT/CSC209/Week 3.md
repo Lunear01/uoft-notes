@@ -1,0 +1,85 @@
+## C Language
+- Input Streams and Output Streams
+	- Input: Where the C program gets the data 
+		- Defaults to the keyboard 
+	- Output: Where the C program displays the data 
+		- Defaults to the screen
+	- Error output 
+		- Error outputs 
+	- ![[Pasted image 20260117175114.png]]
+	- Input/Output redirection
+		- ```bash
+		  ./a.out < text.txt
+		  ```
+		- ```bash
+		  ./a.out > text.text
+		  ```
+		- Can only read one file at a time
+		- Feature of the OS, not C
+- `fopen` and `fclose`
+	- File manipulations in C
+	- fopen: -r (read), -w (write), -a (append)
+		- -w wipes the file before editing stuff
+	- fclose: close the file being opened, return 0 if successful.
+	- Example: 
+	- ![[Pasted image 20260117180544.png]]
+- `fgets`
+	- Reads lines up to the defined maximum characters
+	- Example usage
+		- ![[Pasted image 20260117181142.png]]
+		- Parameters
+			- pointer to memory where text can be stored 
+				- can be an array or a block of memory
+				- returns the pointer if successful, returns NULL if error
+			- `int n`
+				- maximum number of characters that fgets is allowed to put in pointer 
+			- The input stream
+				- stdin, file path etc
+			- NOTE: Always add `+1` to the maximum number, because it always includes an extra NULL at the end
+			- 
+- `fscanf` 
+	- Same as scanf but it can have input stream from anywhere
+	- Example usage: 
+		- ![[Pasted image 20260117182302.png]]
+		- parameters
+			- file directory
+			- formatting
+				- `%80s %d`
+					- Reads at most 80 strings first, stop at space
+					- Read numbers 
+			- check whether the name(the string array) and the &total(int) are being scanned (=2)
+- Dynamic Memory
+	- Allocating memory to heap
+		- Heap retains memory until we explicitly tell it to free
+		- `malloc(sizeof(int))`
+			- Returns `void *` because it's only allocating space for the memory, doesn't care about the type. 
+	- Stack memory is automatically freed after the function is executed
+	- Memory leak is when you have memory on the heap that can no longer be accessed
+		- Remember to free malloc space using `free`
+			- `free(pointer_address)`
+	- Dangling memory
+		- Pointer that points to memory that has already been freed
+- C Memory Model
+	- Buffer
+	- Code
+	- Global Variables
+	- Heap
+	- Stack 
+	- OS
+- `strtol`
+	- Covert strings to integers
+		- Parameters
+			- The pointer of the string 
+			- The leftover of the string if any, otherwise NULL
+			- The type of conversion
+				- Base 10 
+				- Base 64 
+				- etc
+- Reading arguments from terminal
+	- ![[Pasted image 20260120201837.png]]
+	- Header in main with 
+		- `argc` indicating the total number of arguments inputted in the terminal
+		- `**argv` indicating the argument itself
+		- NOTE: `**argv` at 0 is always the program name
+			- That means `argc` $\geq$  1
+	- 
