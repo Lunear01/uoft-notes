@@ -10,6 +10,14 @@
 - ### Extreme Value Theorem
 	- A function is guaranteed to have both global max and min over a **closed and bounded domain**
 
+## Density from a contour map
+- Density formula is 
+	- Number the area * the value  in the contour diagram
+- Pick out one consistent location in a single grid and sum them all up, then multiplying by the area if all grids are the same size
+
+## Definition of Double Integrals
+- ![[Pasted image 20260205201419.png]]
+
 ## Polar Coordinates
 - Covert the integrand to r, $\theta$ by using $x = cos(\theta), y = sin(\theta), x^2 + y^2 = r^2$ 
 - Put $dA = rdrd\theta$   
@@ -25,7 +33,6 @@
 		- $y = p\times sin(\phi)sin(\phi)$
 		- $z = p \times cos(\phi)$
 		- $DV = p^2sin(\phi)DpD\phi D\theta$
-		
 
 ## Extremely Useful Integration Techniques
 1. If the function is odd and the region of integration is symmetric along the origin, then the integral is always 0 
