@@ -12,6 +12,8 @@
 		- `#define func(x) ((x) + 2)`
 			- Make sure that there are no spaces in between `func` and `(x)` 
 			- Make sure to add parenthesis around `x` within the parameter as it could cause order of operation errors
+	- Common errors
+		- ![[Pasted image 20260209144126.png]]
 
 ### C Preprocessor 
 - Processing the code before getting compiled
@@ -28,4 +30,18 @@
 	- ![[Pasted image 20260209142031.png]]
 -  Can be used for debugging 
 	- ![[Pasted image 20260209142210.png]]
-- 
+
+### System Calls
+- Function the request from an operating system
+- `exit` 
+	- ![[Pasted image 20260209145642.png]]
+- ![[Pasted image 20260209145900.png]]
+- System calls in a linux machine
+
+### Errors and Errno
+- When errors are occurred when performing a system call, it returns -1 along with a number that specifies the type of error
+	- ![[Pasted image 20260209152636.png]]
+- `perror` 
+	- prints the error into the stand output, use when checking system calls
+	- ![[Pasted image 20260209155242.png]]
+	- f
