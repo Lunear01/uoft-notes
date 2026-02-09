@@ -1,4 +1,4 @@
-### Counters
+ ### Counters
 - Similar to shifters but instead of all bit shifters having the same clock, the right clock takes in NOT Q as input to the clock, having a counter effect (Asynchronous counter)
 	- Synchronous counter 
 		- Implementing and gates to check all previous values with a single clock 

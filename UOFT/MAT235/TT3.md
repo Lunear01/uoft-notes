@@ -40,3 +40,8 @@
 	- When swapping, simply just solve one variable in terms of the other variable 
 	- If it's x, write it in terms of y, vice versa
 
+## Change of Variable
+- Find Jacobian Value 
+	- Use determinant $$\det(J) = \begin{vmatrix} \frac{\partial x}{\partial u} & \frac{\partial x}{\partial v} \ \frac{\partial y}{\partial u} & \frac{\partial y}{\partial v} \end{vmatrix} = \frac{\partial x}{\partial u} \frac{\partial y}{\partial v} - \frac{\partial x}{\partial v} \frac{\partial y}{\partial u}$$
+	- Find $x$ and $y$ 's derivative with respect to the new $u$ and $v$ value
+	- 
