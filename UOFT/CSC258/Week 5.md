@@ -19,16 +19,21 @@
 
 ### Designing Finite State Machines 
 - Define input and outputs
-- Making a state diagram: drawing FSM
+- **Making a state diagram: drawing FSM**
 	- What are the possible states and how do they relate to each other with different inputs
-- Make a state table: translate the diagram in table form 
-	- prev state
+- **Make a state table: translate the diagram in table form** 
+	- prev state of flip flops
 	- input value
-	- next state
-- Flip flops: Converting the states into flip flops
+	- next state of flip flops
+- **Flip flops: Converting the states into flip flops**
 	- Decide how many flip flops (powers of 2, so do $log_2(numOfstates)$ and round up) 
 	- Assigning flip flop values to represent each state
 		- **Intermediate states and race condition**
 		- Avoiding multiple changes at once
 			- From 0000 to 0010, there's a moment that the device with hold the value of 0001 before transitioning to 0010
-	- 
+- **Use the flip flop table to make a kaurnel map** 
+	- Can have multiple outputs, so multiple kaurnel map is needed
+		- Making the kaurnel, there can be empty states depending on the number of states needed for the FSM
+- Make the circuit with the kaurnel map
+- Output circuit
+	- Observe which flip flop produces the output, 
