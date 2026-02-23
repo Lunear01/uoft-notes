@@ -1,0 +1,46 @@
+### Function Pointers 
+- Using functions as data, passing functions as parameters 
+- Use when you have functions that are the same type, e.g. with the same return values and takes in the same number of parameters. 
+- You can pass the function name as a parameter into a function and define the name of which function to be called
+	- Example: Two functions with the same type
+		- ![[Pasted image 20260223115953.png]]
+	- Example: Passing function as a parameter
+		- ![[Pasted image 20260223120024.png]]
+		- In this case: `void (*initializer)(int *, int)`
+			- initializer is just a name 
+	- Example: Usage
+		- ![[Pasted image 20260223120228.png]]
+	- **THIS IS RAN AT RUNTIME**
+
+- ![[Pasted image 20260223122018.png]]
+- This is a function pointer where 
+	- `parse_command_line(int argc, char *argv[])` returns a function pointer that takes parameters `int *, int`
+
+### Process Models 
+- Program 
+	- Code or machine code
+- Process
+	- Running instance of a program 
+	- Represented by a data structure: PCB Process Control Block
+		- Consists of
+			- PID: process ID
+			- PC: Program counter, identifies the next instruction to be executed
+			- SP: Stack pointer ,the beginning of the stack
+	- Creating processes
+		- `fork`
+			- Creates a copy of a process with a different PID
+			- ![[Pasted image 20260223123922.png]]
+			- The order of which process gets ran is unknown since we don't know which process the CPU runs first
+		- The return value of `fork` would be 0
+		- `wait`
+			- Forces the system process to run until other processes are finished, this can allow us to run child processes before the parent or vice versa 
+			- returns PID if success, -1, if fails
+		- Zombie process: 
+			- When the child process finished processing before the parent process calls wait. Thus the parent doesn't know the child process has finished until wait is called. The child process that finished early is a zombie process 
+		- Orphan process: 
+			- When the parent process finishes before the child process
+			- Then these orphaned child processes are adopted by `init` which has the PID of 1
+		- Running a different program within a process: `execl`
+			- ![[Pasted image 20260223131039.png]]
+			- Notice that the program is ran under the same process after calling `execl`
+		- Essentially, shell itself is a process, when you run a process in the shell, it first calls `fork` to create a child process and then calls `exec` to run a different program, and it uses `wait` to ensure that the child program finishes running. 
