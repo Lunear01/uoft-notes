@@ -1,0 +1,12 @@
+### Processor Components
+- Microprocessor
+	- Controller unit 
+	- Storage unit
+	- Arithmetic unit
+- Datapath
+	- Where data computations takes place
+	- Calculation per clock cycle
+		- Example of $x^2 + 2x$
+- Control: Finite State Machine
+	- FSM to send signals to perform specific calculations
+- 
