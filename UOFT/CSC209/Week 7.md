@@ -34,7 +34,7 @@
 		- The return value of `fork` would be 0
 		- `wait`
 			- Forces the system process to run until other processes are finished, this can allow us to run child processes before the parent or vice versa 
-			- returns PID if success, -1, if fails
+			- returns PID if success, -1 if fails
 		- Zombie process: 
 			- When the child process finished processing before the parent process calls wait. Thus the parent doesn't know the child process has finished until wait is called. The child process that finished early is a zombie process 
 		- Orphan process: 
