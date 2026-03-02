@@ -19,4 +19,4 @@
 	- Connecting to memory
 		- Memory units use the same n-bit wires to both send and receive
 		- This is called a **Data Bus**
-		- 
+			- HOW?
