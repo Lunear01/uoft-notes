@@ -1,4 +1,22 @@
 ### Memory vs Registers
 - Memory is RAM, further away from the CPU 
 - Register is what's already stored in the CPU 
-- 
+- Address of the register 
+	- This is where we choose the select bit in the MUX, which register to operate with.
+- Writing to registers 
+	- Demux
+	- AKA One hot decoder
+	- Address bits for for selecting a specific register to operate with
+- Reading from registers
+	- MUX
+	- Select bit chooses a specific register and output it
+- Memory
+	- Essentially the same, have address going into a demux, data to write, and the row of memory it would write to
+	- Potential final exam problem
+		- Given the address width and the data width, calculate the total memory
+		- calculation
+			- $$\frac{2^m \times n} {8 bytes}$$
+	- Connecting to memory
+		- Memory units use the same n-bit wires to both send and receive
+		- This is called a **Data Bus**
+		- 
