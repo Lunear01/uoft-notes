@@ -12,12 +12,24 @@ Pipes
 - The parent process is on the left and child process is on the right
 - When using a pipe, only 1 write and 1 read should be on.
 	- use `close` to close the other tunnels that are not used
-- ### Producer Consumer Problem
+- ### Producer Consumer Problem (Queue being the pipe)
 	- In a buffer queue we have producer and consumer
 	- When the rate of the producer and the consumer are not the same
 		- Can fill up the entire buffer queue 
 		- Can consume on a blank queue
 	- #### Problematic situations
 		- Produce add when queue is full
+			- OS will block the writing when this happens 
 		- Consumer remove when queue is empty
+			- Read will block when pipe is empty from system
 		- Both operating the queue at the same time
+			- Not a problem since we are using pipe and system handles it 
+- `dup2`
+	- Redirecting file descriptors
+		- Handling something like `grep Hello file.txt > hello.txt`
+		- It redirects the output from grep from standard output to hello.txt
+	- ![[Pasted image 20260302220638.png]]
+	- ![[Pasted image 20260302220914.png|461]]
+		- Opens the file that will receive the output with write permission so the output can be stored
+	- ![[Pasted image 20260302221001.png]]
+	- 
