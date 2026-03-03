@@ -12,4 +12,12 @@ Pipes
 - The parent process is on the left and child process is on the right
 - When using a pipe, only 1 write and 1 read should be on.
 	- use `close` to close the other tunnels that are not used
-- 
+- ### Producer Consumer Problem
+	- In a buffer queue we have producer and consumer
+	- When the rate of the producer and the consumer are not the same
+		- Can fill up the entire buffer queue 
+		- Can consume on a blank queue
+	- #### Problematic situations
+		- Produce add when queue is full
+		- Consumer remove when queue is empty
+		- Both operating the queue at the same time
