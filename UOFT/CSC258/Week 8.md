@@ -23,3 +23,4 @@
 			- ![[Pasted image 20260304112240.png|328]]
 - Registers a stored apart from each other
 - Memory is a single large block of continuous space
+- 
