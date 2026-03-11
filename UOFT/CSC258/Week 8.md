@@ -19,4 +19,16 @@
 	- Connecting to memory
 		- Memory units use the same n-bit wires to both send and receive
 		- This is called a **Data Bus**
-			- HOW?
+			- Tri-state buffer
+			- ![[Pasted image 20260304112240.png|328]]
+- Registers a stored apart from each other
+- Memory is a single large block of continuous space
+- Memory access delays
+	- Separate from the CPU physically, significant delays
+	- Writing to memory
+		- Soda dispenser analogy
+			- First, position over the address (Takes some time)
+			- Then write the data (Take some time)
+			- Make sure that data is written (Take some time)
+- 
+- 
