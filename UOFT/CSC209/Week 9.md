@@ -1,0 +1,14 @@
+### Signals
+- Tells what the process does
+	- `Ctrl + c` interrupts the process
+	- `Ctrl + z` suspends the process
+	- Segfault is the system level signal that signals the process to terminate and print Segmentation error
+- ![[Pasted image 20260311155240.png]]
+- `kill`
+	- Can execute any signal on a given process's PID
+		- `kill -STOP` *PID*
+- `int sigaction`
+	- ![[Pasted image 20260311175930.png]]
+	- int sigaction (the signal modified, pointer to a struct initialized before sigaction, pointer to a struct before modification (previous state of the signal))
+	- ![[Pasted image 20260311180423.png]]
+	- handler indicates what to do with the code returned
