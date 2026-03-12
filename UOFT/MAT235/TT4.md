@@ -19,6 +19,8 @@
 	- $t$ is the constant factor 
 	- $v$ is the direction vector
 ## Kinematics
+- ![[Pasted image 20260311224502.png]]
+- 
 
 ## Vector Fields
 
