@@ -4,6 +4,20 @@
 	-  $y = y(t)$
 	-  $z = z(t)$
 - Note that it starts at the origin and it has a direction
+- Parametrizing circles
+	- ![[Pasted image 20260311204833.png]]
+	- By default, the direction goes counter clockwise
+	- To have it go clock wise, simply set the `sin(t)` to `-sin(t)` or swapping the cos and sin. 
+- To convert pointer functions into parametrized functions. Following this formula
+	- ![[Pasted image 20260311205228.png]]
+	- Where variables with the 0 subscript are the points through. 
+- Definition of parametrization
+	- ![[Pasted image 20260311210737.png]]
+- Parametric of a line in vector form
+- ![[Pasted image 20260311213622.png]]
+	- $r_0$ is the anchor of the vector, the position vector
+	- $t$ is the constant factor 
+	- $v$ is the direction vector
 ## Kinematics
 
 ## Vector Fields

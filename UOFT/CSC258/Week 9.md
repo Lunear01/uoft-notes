@@ -5,4 +5,7 @@
 	- MIPS ISA is used in class
 - Each instruction can be broken down into smaller sections
 - Example ![[Pasted image 20260309114034.png]]
-- 
+- MIPS instruction types
+	- R-type:
+	- I-type (immediate):
+	- J-type (jump):
