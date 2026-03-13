@@ -6,7 +6,6 @@
 - Note that it starts at the origin and it has a direction
 - Parametrizing a circle
 	- ![[Pasted image 20260311184522.png|635]]
-
 	- By default, the direction goes counter clockwise
 	- To have it go clock wise, simply set the `sin(t)` to `-sin(t)` or swapping the cos and sin. 
 - To convert pointer functions into parametrized functions. Following this formula
