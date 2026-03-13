@@ -20,7 +20,12 @@
 	- $v$ is the direction vector
 ## Kinematics
 - ![[Pasted image 20260311224502.png]]
-- 
+- Speed is the magnitude of the vector 
+- Finding Velocity 
+	- ![[Pasted image 20260312204611.png]]
+	- Essentially doing derivative of r(t) vector in the limit exists
+- ![[Pasted image 20260312204829.png|671]]
+
 
 ## Vector Fields
 
