@@ -4,6 +4,8 @@
 	-  $y = y(t)$
 	-  $z = z(t)$
 - Note that it starts at the origin and it has a direction
+- Parametrizing a circle
+	- ![[Pasted image 20260311184522.png|635]]
 ## Kinematics
 
 ## Vector Fields
