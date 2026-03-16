@@ -1,0 +1,23 @@
+## Bit Manipulation and Flags 
+- Bitwise operations on each pair of bits
+	- `|`
+	- `^`
+	- `&`
+	- `~`
+		- Because it's a bitwise operation, it flips all the ***bits*** 
+- Boolean operations on two integers or values represented by bits
+	- `||`
+	- `&&`
+		- Returns true when both values being compared are anything but 0
+- Shift Operators
+	- `>>`
+	- `<<`
+	- Bits are count from right to left starting at 0
+- Bit Flags
+	- The idea of using bits to represent operations or flags in a function 
+	- `chmod` permission for example
+		- rwxr-xr-x this is represented as on off switches as individual bits 
+		- We can modify this using different bitwise operations. 
+			- This is exactly what chmod does
+			- Represented as octal
+				- With a preceding 0 
