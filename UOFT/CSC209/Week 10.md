@@ -38,4 +38,37 @@
 	- Problem because what if the second child is yapping, but the first child is not doing anything
 - `select` solves this issue
 	- ![[Pasted image 20260316153611.png]]
-	- 
+
+## Sockets 
+- ![[Pasted image 20260316162435.png]]
+	- Returns -1 if there's error 
+	- Returns the index of the file descriptor in the fd table
+	- ![[Pasted image 20260316162714.png]]
+	- zero indicates it uses the default protocol
+- Configuring Sockets
+- Bind
+	- ![[Pasted image 20260316163810.png]]
+	- Returns -1 if it fails, 0 on success
+	- ![[Pasted image 20260316163842.png]]
+	- Complete example of bind usage
+		- Will need to declare a new struct for the second parameter for bind `sockaddr_in` which stands for **socket address in.** 
+			- This declares which address we allow to establish a connection with us.
+	- `htons`
+		- Used to prevent little/big endian issues on the byte ordering.
+- Listen 
+	- ![[Pasted image 20260316164226.png]]
+	- Socket is the listening socket, socket for data to be received
+	- backlog 
+		- ![[Pasted image 20260316164428.png]]
+		- Returns -1 if error, 0 on success
+- Accept
+	- ![[Pasted image 20260316164718.png]]
+	- Accept blocks just like read and write, if called when not connection, it will block 
+	- Returns -1 if error, Returns the NEW SOCKET on success 
+	- Example 
+		- ![[Pasted image 20260316165146.png]]
+- Connect
+	- ![[Pasted image 20260316165254.png]]
+- ![[Pasted image 20260316165417.png]]
+	- Example Usage:
+		- ![[Pasted image 20260316165728.png]]
