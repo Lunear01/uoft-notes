@@ -21,3 +21,21 @@
 			- This is exactly what chmod does
 			- Represented as octal
 				- With a preceding 0 
+- Bit vectors
+	- You can have an array of integers that stores 32 or 64 bits with each bit presenting a flag.
+	- Operations such as set, unset, ifset can be done by the following ways
+		- `set`
+		- First you find the index of the 2D array
+			- Integer division: $$value / INTSIZE$$
+			- Then find the exact index of within by $$value \% INTSIZE$$
+			- Perform bitwise operation to manipulate the original Bit vector 
+				- Example: set Bit
+				- ![[Pasted image 20260316152221.png]]
+				- Shift 1 to the exact position and bitwise or it with the original bit vector to update it. 
+
+## Multiplexing I/O
+- Read and write on multiple child can be blocking, causing the parent waiting on one child before another. 
+	- Problem because what if the second child is yapping, but the first child is not doing anything
+- `select` solves this issue
+	- ![[Pasted image 20260316153611.png]]
+	- 
