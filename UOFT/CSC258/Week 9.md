@@ -14,6 +14,7 @@
 	- `sw`: store from register to memory
 	- `la`: load memory address of .data label
 	- `li`: load immediate, put number in a specific register
+		- Kinda like declaring a variable
 	- `addi`: add immediate, add register and a number
 	- `j`: jump, works like a function call 
 	- `beq`: branch if equal, jump with two values are equal
@@ -22,4 +23,3 @@
 	- `bgtz`: branch if greater than 0, jump with one value not being zero
 	- `add`: add two register values
 	- `sll`: shift left logical
-	- 
