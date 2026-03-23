@@ -10,16 +10,16 @@
 	- I-type (immediate)
 	- J-type (jump)
 - Instructions used so far: 
-- lw: load memory into register
-- sw: store from register to memory
-- la: load memory address of .data label
-- li: load immediate, put number in a specific register
-- addi: add immediate, add register and a number
-- j: jump, works like a function call 
-- beq: branch if equal, jump with two values are equal
-- bne: branch if not equal, jump with two values not equal
-- ble: branch if less than equal. jump with one value is less than or equal to the other
-- bgtz: branch if greater than 0, jump with one value not being zero
-- add: add two register values
-- sll: shift left logical
-- 
+	- `lw`: load memory into register
+	- `sw`: store from register to memory
+	- `la`: load memory address of .data label
+	- `li`: load immediate, put number in a specific register
+	- `addi`: add immediate, add register and a number
+	- `j`: jump, works like a function call 
+	- `beq`: branch if equal, jump with two values are equal
+	- `bne`: branch if not equal, jump with two values not equal
+	- `ble`: branch if less than equal. jump with one value is less than or equal to the other
+	- `bgtz`: branch if greater than 0, jump with one value not being zero
+	- `add`: add two register values
+	- `sll`: shift left logical
+	- 
