@@ -20,4 +20,16 @@
 	- 0 means success 
 	- 1 means fail
 - `if` takes the success or fail from running a program
-- 
+	- ![[Pasted image 20260323165337.png]]
+	- ![[Pasted image 20260323165358.png]]
+	- ![[Pasted image 20260323165412.png]]
+- `while`
+	- Same logic, it takes the exit status of a command
+- Quoting in shell
+	- "ls" and ls are the same, everything is a string
+-  `seq`
+	- used like a for in range
+	- `seq 1 4`
+		- from 1 to 4 inclusive
+-  `case`
+	- ![[Pasted image 20260323170931.png]]
