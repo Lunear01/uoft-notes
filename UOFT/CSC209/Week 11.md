@@ -26,7 +26,7 @@
 - `while`
 	- Same logic, it takes the exit status of a command
 - Quoting in shell
-	- "ls" and ls are the same, everything is a string
+	- "ls" and ls fare the same, everything is a string
 -  `seq`
 	- used like a for in range
 	- `seq 1 4`

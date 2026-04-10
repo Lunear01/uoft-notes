@@ -1,7 +1,0 @@
-[[Persona Adoption]]
-[[Fictionalizing and Hypothetical Scenarios]]
-[[Obfuscation and Encoding]]
-[[Payload Splitting]]
-[[Reverse Psychology]]
-[[Mayn-Shot Jailbreaking]]
-[[Indirect Prompt Injection]]
