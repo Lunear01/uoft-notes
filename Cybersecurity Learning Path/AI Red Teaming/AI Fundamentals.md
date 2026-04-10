@@ -21,5 +21,6 @@
 				- Adjust the coefficients to minimize RSS
 	-  Classification: Identification based on trained data
 		- Logistic Regression: 
+			- Sigmoid function
 - Unsupervised learning
 #### Deep Learning
