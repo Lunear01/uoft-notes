@@ -1,9 +1,10 @@
 
 #### Artificial Intelligence
 #### Machine Learning
-- Supervised Learning: data with labels / correct answers
-	- Regression: Predict continuous value
-		-  Linear Regression
+- ### Supervised Learning: data with labels / correct answers
+	- #### Regression 
+		- Predict continuous value
+		- Linear Regression
 		- Multiple Linear Regression
 		- Assumptions:
 			- Linearity: Relationship exists between predictor target variable
@@ -19,8 +20,63 @@
 				- Residual Sum of Squares, add all the squared values up to get RSS to get the model's overall error
 			- **4. Minimize the Sum of Squared Residuals**: 
 				- Adjust the coefficients to minimize RSS
-	-  Classification: Identification based on trained data
+	- #### Classification
+		- Identification based on trained data. Predicts which group it belongs to, by the label. 0 1 (yes or no) classification.
 		- Logistic Regression: 
+			- Assumptions:
+				- Binary outcome
+				- Linearity of log odds
+				- No or little multicollinearity: the predictor variables are not correlated
+				- Large sample size
+			- Outputs a probability between 0 and 1
 			- Sigmoid function
-- Unsupervised learning
+				- Maps any input to a value within 0-1
+				- Decision boundary: The division that decides 0 or 1 (cut off)
+				- ![[Pasted image 20260411230433.png]]
+		- #### Decision Trees
+			- Just like in 263, starts at root node and picks the better choice (edges) to the internal nodes until reaches to the end
+			- The selection is determined by
+				- Gini Impurity
+					- Probability of missclassification
+					- Calculation: 
+						- 1 minus the sum of squares of the proportion of each group
+							- The proportion is the group divided by the sum of all groups
+				- Entropy
+					- Measures the disorder or uncertainty of the set
+						- Calculation:
+							- ![[Pasted image 20260411232021.png]]
+				- Information Gain
+					- Measures reduction in entropy achieved by splitting based on a particular feature. Feature with highest gain is chosen for split
+						- Calculation
+							- ![[Pasted image 20260411232139.png]]
+				- Data Assumptions:
+					- No linearity assumption
+					- No normality assumption
+					- Handles outliers
+	- #### Naive Bayes: 
+		- Used for classification
+		- From Bayes' Theorem
+			- Calculate probability of an event based on an event that has already occurred
+		- Naive Bayes' Theorem assumes that all probabilties are independent of one another
+			- Types of Naive Bayes
+				- Gaussian Naive Bayes
+					- Used when feature are continuous and assumed to have bell curve
+				- Multinomial Naive Bayes
+					- Discrete features, like words in spam identification, the probability frequency of two words appearing in spam and non-spam
+				- Bernoulli Naive Bayes
+					- Binary features, one or another. 0 or 1. 
+	- #### Support Vector Machine SVM
+		- Aims to find the optimal hyperplane by maximizing the margin
+		- Margin is the distance between the hyperplane and the nearest data points of the each class aka. Support vectors. 
+		- Linear SVM 
+			- When data is linearly separable
+			- Optimal hyperplane
+				- Maximizes the margin between closest data points of different classes 
+			- Support vectors
+				- The data points closest to the hyperplane
+		- Non-Linear SVM 
+			- Kernel Function
+				- Mapping original data points to higher-dimensional space
+			- Transform the data into higher dimensional space where a linear hyperplane can be found
 #### Deep Learning
+- 
