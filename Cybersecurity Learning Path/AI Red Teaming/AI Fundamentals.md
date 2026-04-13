@@ -78,5 +78,16 @@
 			- Kernel Function
 				- Mapping original data points to higher-dimensional space
 			- Transform the data into higher dimensional space where a linear hyperplane can be found
+			- Polynomial Kernel
+				- Adding curves to the decision boundary
+			- Radial Basis Function (RBF) Kernel
+				- Gaussian function to map data points to a higher-dimensional space. Most popular and versatile kernel functions. 
+				- Sigmoid Kernel
+					- Similar to sigmoid function mapping data points to a space with a sigmoid-shaped decision boundary
+			- Image Classification
+- ### Unsupervised Learning Algorithms
+	- #### Unsupervised learning
+		- Explore unlabeled data to discover hidden patterns, structures, and relationship within the date
+	- 
 #### Deep Learning
 - 
