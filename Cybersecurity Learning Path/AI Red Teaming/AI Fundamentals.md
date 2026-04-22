@@ -88,6 +88,33 @@
 - ### Unsupervised Learning Algorithms
 	- #### Unsupervised learning
 		- Explore unlabeled data to discover hidden patterns, structures, and relationship within the date
-	- 
+		- Clustering
+			- Grouping similar data based on characteristics
+		- Dimensionality Reduction
+			- Reducing unnecessary information
+		- Anomaly Detection
+			- Identify significantly different data compared to the others
+		- Similarity Measures
+			- Used as the eye of the ai to be able to group clusters
+			- Euclidean Distance
+				- Straight line difference between 2 data points 
+			- Cosine Similarity
+				- Angle difference between two vectors
+			- Manhattan Distance
+				- Absolute difference of 2 points
+		- Clustering Tendency
+			- Cohesion: how similar are data within a cluster
+			- Separation: How clusters are different 
+		- Dimensionality
+			- Features/Variables in the data
+			- Can cause overfitting, complexity issues
+		- Intrinsic Dimensionality
+			- Features that actually contains the most important info
+		- Feature Scaling
+			- Ensure all features weighted the same
+			- Min-max scaling
+				- scales features to a fixed range
+			- Standardization (Z-score normalization)
+				- transforms features to have zero mean and unit variance
 #### Deep Learning
 - 
