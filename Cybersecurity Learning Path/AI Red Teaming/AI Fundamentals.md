@@ -116,5 +116,7 @@
 				- scales features to a fixed range
 			- Standardization (Z-score normalization)
 				- transforms features to have zero mean and unit variance
+	- #### K-Means Clustering
+		- 
 #### Deep Learning
 - 
